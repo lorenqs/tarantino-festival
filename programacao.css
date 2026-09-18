@@ -1,11 +1,4 @@
-/* Fontes Utilizadas: Bebas Neue e Oswald */
-
-@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Bebas+Neue&family=Raleway:wght@300;400;500;600;700&family=Oswald:wght@400;500;600&display=swap');
-
-
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Della+Respira&family=Oswald:wght@400;500;600&family=Raleway:wght@300;400;500&display=swap');
 
 * {
     margin: 0;
@@ -13,13 +6,10 @@
     box-sizing: border-box;
 }
 
-
 body {
-    min-height: 100vh;
     background: #000;
     color: lightgoldenrodyellow;
     font-family: "Raleway", sans-serif;
-    overflow-x: hidden;
 }
 
 
@@ -35,6 +25,12 @@ body {
     z-index: -2;
 }
 
+#carouselFundo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.78);
+}
 
 #carouselFundo .carousel-inner,
 #carouselFundo .carousel-item {
@@ -42,29 +38,10 @@ body {
     height: 100vh;
 }
 
-
 #carouselFundo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-    filter: brightness(35%);
-}
-
-
-/* Escurecimento adicional */
-
-body::after {
-    content: "";
-
-    position: fixed;
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.45);
-
-    z-index: -1;
-
-    pointer-events: none;
 }
 
 
@@ -73,15 +50,11 @@ body::after {
 ========================= */
 
 .navbar-tarantino {
-    position: absolute;
-
+    position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 10;
-
     padding: 20px 5%;
 
     background: linear-gradient(
@@ -91,324 +64,174 @@ body::after {
     );
 }
 
-
 .navbar-tarantino .navbar-brand {
-
     font-family: "Della Respira", serif;
-
     color: #F9A600;
-
     font-size: 24px;
-
     letter-spacing: 2px;
 }
 
-
 .navbar-tarantino .nav-link {
-
     font-family: "Oswald", sans-serif;
-
     color: lightgoldenrodyellow;
-
     font-size: 15px;
-
     letter-spacing: 1.5px;
-
     margin-left: 20px;
-
     transition: 0.3s;
 }
-
 
 .navbar-tarantino .nav-link:hover,
 .navbar-tarantino .nav-link.active {
-
     color: #F9A600;
 }
 
-
 .navbar-tarantino .destaque {
-
     border: 1px solid #F9A600;
-
     padding: 8px 15px;
-
     margin-left: 30px;
 }
 
-
 .navbar-tarantino .destaque:hover {
-
-    background-color: #F9A600;
-
+    background: #F9A600;
     color: #000;
 }
 
 
 /* =========================
-   CONTAINER
+   PÁGINA
 ========================= */
 
-.programacao-container {
-
-    min-height: 100vh;
-
+.programacao-page {
     width: 100%;
-
-    padding: 125px 20px 60px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 150px 40px 100px;
 }
 
 
 /* =========================
-   CARD
+   CABEÇALHO
 ========================= */
 
-.programacao-card {
-
-    width: 900px;
-
-    max-width: 95vw;
-
-    padding: 45px 55px;
-
-    background: rgba(0, 0, 0, 0.78);
-
-    border: 1px solid rgba(249, 166, 0, 0.65);
-
-    box-shadow:
-        0 0 35px rgba(0, 0, 0, 0.7);
-}
-
-
-/* =========================
-   TÍTULO
-========================= */
-
-.titulo {
-
+.cabecalho {
     text-align: center;
-
-    margin-bottom: 35px;
+    margin-bottom: 80px;
 }
 
-
-.mini-titulo {
-
+.apresenta {
     font-family: "Bebas Neue", sans-serif;
-
     font-size: 17px;
-
-    letter-spacing: 4px;
-
-    color: lightgoldenrodyellow;
-
+    letter-spacing: 3px;
     opacity: 0.75;
-
-    margin-bottom: 8px;
-}
-
-
-.titulo h1 {
-
-    font-family: "Della Respira", serif;
-
-    color: #F9A600;
-
-    font-size: 52px;
-
-    font-weight: 400;
-
-    letter-spacing: 1px;
-}
-
-
-.subtitulo {
-
-    font-size: 14px;
-
-    color: lightgoldenrodyellow;
-
-    opacity: 0.8;
-
-    margin-top: 8px;
-}
-
-
-/* =========================
-   LISTA DE FILMES
-========================= */
-
-.lista-filmes {
-
-    width: 100%;
-}
-
-
-/* Cada filme */
-
-.filme {
-
-    display: grid;
-
-    grid-template-columns: 150px 1fr;
-
-    align-items: center;
-
-    min-height: 105px;
-
-    border-bottom: 1px solid
-        rgba(255, 250, 205, 0.3);
-
-    transition: 0.3s;
-}
-
-
-/* Efeito ao passar o mouse */
-
-.filme:hover {
-
-    background: rgba(249, 166, 0, 0.06);
-
-    padding-left: 8px;
-}
-
-
-/* =========================
-   HORÁRIO
-========================= */
-
-.horario {
-
-    font-family: "Della Respira", serif;
-
-    font-size: 38px;
-
-    color: #F9A600;
-
-    margin: 0;
-}
-
-
-/* =========================
-   INFORMAÇÕES
-========================= */
-
-.informacoes {
-
-    text-align: left;
-}
-
-
-.informacoes h2 {
-
-    font-family: "Bebas Neue", sans-serif;
-
-    font-size: 30px;
-
-    letter-spacing: 1px;
-
-    font-weight: 500;
-
-    color: lightgoldenrodyellow;
-
-    margin: 0;
-}
-
-
-.tipo {
-
-    font-family: "Bebas Neue", sans-serif;
-
-    color: #F9A600;
-
-    font-size: 14px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 3px;
-}
-
-
-.detalhes {
-
-    font-family: "Raleway", sans-serif;
-
-    font-size: 11px;
-
-    letter-spacing: 1px;
-
-    color: lightgoldenrodyellow;
-
-    opacity: 0.55;
-
-    margin-top: 4px;
-}
-
-
-/* =========================
-   FINAL
-========================= */
-
-.final {
-
-    text-align: center;
-
-    margin-top: 35px;
-
-    padding-top: 25px;
-
-    border-top: 1px solid
-        rgba(255, 250, 205, 0.3);
-}
-
-
-.final p {
-
-    font-family: "Bebas Neue", sans-serif;
-
-    font-size: 13px;
-
-    letter-spacing: 2px;
-
-    opacity: 0.65;
-
     margin-bottom: 20px;
 }
 
+.cabecalho h1 {
+    font-family: "Della Respira", serif;
+    font-size: clamp(50px, 7vw, 80px);
+    color: #F9A600;
+    font-weight: 400;
+}
 
-.final a {
-
-    display: inline-block;
-
-    padding: 12px 28px;
-
-    background-color: #dca91c;
-
-    color: #000;
-
-    text-decoration: none;
-
+.subtitulo {
     font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    opacity: 0.85;
+}
 
-    font-size: 17px;
 
-    letter-spacing: 1.5px;
+/* =========================
+   DIA
+========================= */
+
+.dia {
+    margin-bottom: 90px;
+}
+
+.titulo-dia {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    border-top: 1px solid rgba(255, 250, 205, 0.6);
+    border-bottom: 1px solid rgba(255, 250, 205, 0.6);
+
+    padding: 20px 0;
+    margin-bottom: 10px;
+}
+
+.titulo-dia span {
+    font-family: "Della Respira", serif;
+    font-size: 70px;
+    color: #F9A600;
+    line-height: 1;
+}
+
+.titulo-dia p {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin: 0;
+    opacity: 0.7;
+}
+
+.titulo-dia h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+
+/* =========================
+   SESSÕES
+========================= */
+
+.sessao {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+
+    min-height: 120px;
+
+    border-bottom: 1px solid rgba(255, 250, 205, 0.25);
 
     transition: 0.3s;
 }
 
+.sessao:hover {
+    background: rgba(249, 166, 0, 0.08);
+    padding-left: 15px;
+}
 
-.final a:hover {
 
-    background-color: darkred;
+/* HORÁRIO */
 
-    color: lightgoldenrodyellow;
+.horario {
+    font-family: "Della Respira", serif;
+    font-size: 55px;
+    color: #F9A600;
+}
+
+
+/* FILME */
+
+.filme h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.filme p {
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    opacity: 0.6;
+    margin-top: 5px;
 }
 
 
@@ -418,57 +241,45 @@ body::after {
 
 @media (max-width: 700px) {
 
-    .programacao-container {
-
-        padding-top: 105px;
+    .programacao-page {
+        padding: 130px 20px 70px;
     }
 
-
-    .programacao-card {
-
-        padding: 35px 25px;
+    .cabecalho {
+        margin-bottom: 50px;
     }
 
-
-    .titulo h1 {
-
-        font-size: 40px;
+    .titulo-dia {
+        gap: 15px;
     }
 
-
-    .filme {
-
-        grid-template-columns: 100px 1fr;
-
-        min-height: 90px;
+    .titulo-dia span {
+        font-size: 50px;
     }
 
+    .titulo-dia h2 {
+        font-size: 22px;
+    }
+
+    .sessao {
+        grid-template-columns: 110px 1fr;
+        min-height: 100px;
+    }
 
     .horario {
-
-        font-size: 28px;
+        font-size: 35px;
     }
 
-
-    .informacoes h2 {
-
+    .filme h3 {
         font-size: 23px;
     }
 
-
-    .navbar-tarantino {
-
-        padding: 15px 5%;
+    .filme p {
+        font-size: 11px;
     }
-
 
     .navbar-tarantino .destaque {
-
-        margin-left: 0;
-
-        margin-top: 8px;
-
+        margin-left: 20px;
         display: inline-block;
     }
-
 }
