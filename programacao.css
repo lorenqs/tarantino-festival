@@ -1,207 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Della+Respira&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.eu{
-    width: 100px;
-    margin-bottom: 90px;
+/* Configurações Globais */
+body {
+    background-color: #111111;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    min-height: 100vh;
 }
 
+/* Navbar */
+.navbar-tarantino {
+    background-color: #000000;
+    border-bottom: 2px solid #e50914;
+    padding: 1rem 0;
+}
 
-body{
-   
-    background-size: 100%;
-    background-repeat: no-repeat;
-    color:lightgoldenrodyellow ;
-    font-family: "Raleway", sans-serif;;
-    /* user-select: none; */
-    background-color: rgb(0, 0, 0);
+.navbar-brand {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #e50914 !important;
 }
-.norma
-l{
-    background-color: lightgoldenrodyellow#ffff;
+
+.nav-link {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
 }
-.container{
+
+#nav-link-active {
+    color: #e50914 !important;
+    font-weight: 600;
+}
+
+/* Cabeçalho */
+.header-section {
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    padding: 2.5rem 0;
+    margin-bottom: 3rem;
+}
+
+#QUENTIN {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+}
+
+#subtitulo {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #aaaaaa;
+    margin: 0;
+}
+
+/* Grade da Programação */
+.programacao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Card da Sessão */
+.sessao {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-left: 4px solid #e50914;
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 250vh;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-    background-color: #00000080;
-    margin-top: 100px;
-}
-
-h3{
-    font-size: 20px;
-}
-
-#QUENTIN{
-    font-family: "Della Respira", serif;
-    color: #F9A600;
-    font-size:70px ;
-}
-.title {
-    font-size: calc(10px + 3vw);
-    
-}
-
-.title p {
-    font-size: calc(10px + 1vw);
-}
-.countdown{
-    display: flex;
-    width: 60vw;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.countdown h1{
-    font-size: calc(10px + 8vw);
-    text-shadow: 0 0 10px  whitesmoke;
-   font-family: "Della Respira", serif;
-   
-   
-}
-.button{
-    background-color: #dca91c;
-    color: black;
-    padding: 10px;
-    font-weight: 400;
-    width: 300px;
-    margin-bottom: 100px;
-    text-align: center;
-    height: 50px;
-}
-.button:hover {
-    background-color:darkred;
-    color: lightgoldenrodyellow;
-    font-weight: 800;
-}
- #subtitulo {
-    font-size: px;
-    font-family: "Bebas Neue", sans-serif;
-    color:lightgoldenrodyellow ;
-    font-weight: 300;
-    opacity: 80%;
- }
- #filmfestival {
-     font-family: "Della Respira", serif;
-    color: #F9A600;
-    font-size: 40px;
-    opacity: 50%;
-    font-weight: 100;
- }
-
- #contadorletras {
-    font-family: "Raleway", sans-serif;
- }
-
- #CCSP {
-    font-family: "Bebas Neue", sans-serif;
-  font-size: 20px;
-  font-weight: 100;
-  opacity: 80%;
- }
-
- .navbar-tarantino {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 10;
-padding: 20px 5%;
-background: linear-gradient(
-to bottom,
-rgba(0, 0, 0, 0.8),
-transparent
-);
-}
-
-.navbar-tarantino .navbar-brand {
-font-family: "Della Respira", serif;
-color: #F9A600;
-font-size: 24px;
-letter-spacing: 2px;
-}
-
-.navbar-tarantino .nav-link {
-font-family: "Oswald", sans-serif;
-color: lightgoldenrodyellow;
-font-size: 15px;
-letter-spacing: 1.5px;
-margin-left: 20px;
-transition: 0.3s;
-}
-
-.navbar-tarantino .nav-link:hover .nav-link-active {
-color: #F9A600;
-font-family: "Oswald", sans-serif;
-letter-spacing: 1.5px;
-margin-left: 20px;
-transition: 0.3s;
-}
-
-.navbar-tarantino  {
-color: #F9A600;
-}
-
-.navbar-tarantino .destaque {
-border: 1px solid #F9A600;
-padding: 8px 15px;
-margin-left: 30px;
-}
-
-.navbar-tarantino .destaque:hover {
-background-color: #F9A600;
-color: #000;
-}
-
-
-
-#letras {
-    opacity: 1; /
-}
-
-#Faltam {
     justify-content: center;
-    font-family: "Della Respira", serif;
-    display: flex;
-
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.programacao {
-    width: 1000px;
-    max-width: 90vw;
-    margin: 40px auto;
-}
-
-.sessao {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    align-items: center;
-    min-height: 110px;
-    border-bottom: 1px solid rgba(255, 250, 205, 0.5);
+.sessao:hover {
+    transform: translateY(-3px);
+    border-color: #e50914;
+    background-color: #222222;
 }
 
 .horario {
-    text-align: left;
-    font-family: "Della Respira", serif;
-    font-size: 60px !important;
-    color: #F9A600;
-    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    color: #e50914;
+    margin-bottom: 0.25rem;
+    letter-spacing: 1px;
 }
 
 .nomedofilme {
-    text-align: left;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 30px !important ;
-    color: lightgoldenrodyellow;
-    margin: 0;
+    font-size: 1.15rem;
     font-weight: 500;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Destaque para evento especial */
+.destaque-evento {
+    border-left-color: #ffb703;
+}
+
+.destaque-evento .horario {
+    color: #ffb703;
 }
